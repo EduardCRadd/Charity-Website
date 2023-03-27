@@ -1,0 +1,218 @@
+/* ANIMATIONS */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.scale-animation {
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out; }
+  .scale-animation:hover {
+    transform: scale(1.02); }
+
+.up-animation {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+  .up-animation:hover {
+    transform: translateY(-7px); }
+
+/* NEWSLETTER */
+.newsletter-animation {
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
+  .newsletter-animation:hover {
+    transform: scale(1.04); }
+
+.hidden-left {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-20%);
+  transition: all .8s; }
+
+.hidden-right {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(20%);
+  transition: all .8s; }
+
+.hidden-bottom {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(20%);
+  transition: all .8s; }
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0); }
+
+.stagger:nth-child(2) {
+  transition-delay: 200ms; }
+
+.stagger:nth-child(3) {
+  transition-delay: 400ms; }
+
+.stagger:nth-child(4) {
+  transition-delay: 600ms; }
+
+/* FONT AWESOME */
+.ribbon:hover > .fa-ribbon {
+  -webkit-animation: fa-beat 2s infinite linear;
+  -moz-animation: fa-beat 2s infinite linear;
+  -o-animation: fa-beat 2s infinite linear;
+  animation: fa-beat 2s infinite linear; }
+
+.wrapper {
+  overflow-y: scroll;
+  transform: rotate(-90deg); }
+
+.news-item {
+  transform: rotate(90deg); }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  scroll-behavior: smooth; }
+
+body {
+  box-sizing: border-box; }
+
+body,
+body * {
+  font-family: 'Helvetica Neue', sans-serif; }
+
+main {
+  color: #495057; }
+
+.heading-primary {
+  color: whitesmoke;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    font-weight: 700;
+    display: block;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    font-weight: 200;
+    display: block;
+    animation: moveInLeft 1s ease-out .2s;
+    animation-fill-mode: backwards; }
+
+/* NEWS */
+.stretched-link {
+  text-decoration: none;
+  color: #2323238e; }
+  .stretched-link:hover {
+    text-decoration: underline;
+    color: #232323a3; }
+
+.newsletter-word {
+  background-image: linear-gradient(to right, #327eef, #601ED2);
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.header {
+  height: 85vh;
+  background-image: url(/images/banner4.jpeg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; }
+
+.nav-item {
+  display: inline-block;
+  position: relative;
+  font-weight: 500; }
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #DC3545;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out; }
+  .nav-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom right; }
+
+.brand {
+  color: transparent;
+  background-image: linear-gradient(to right, #619DE0, #FF6CB2 33.33333%, #FF6CB2 66.66666%, #619DE0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+  background-size: 300% 100%;
+  background-position: top left;
+  transition: all .8s ease-in-out; }
+  .brand:hover {
+    background-position: top left 100%; }
+
+.social-icon1:hover {
+  color: #1DA1F2; }
+
+.social-icon2:hover {
+  color: #4867AA; }
+
+.social-icon3:hover {
+  color: #F52D9E; }
+
+.social-icon4:hover {
+  color: #601ED2; }
+
+.btn--animated {
+  animation: moveInButton .5s ease-out 1.2s;
+  animation-fill-mode: backwards;
+  transition: all .5s;
+  border-radius: 2px; }
+
+.btn--animated:hover {
+  background-color: transparent;
+  color: red;
+  border-width: 2px;
+  transform: scale(1.05);
+  letter-spacing: 1px; }
+
+.btn-nav {
+  border-radius: 2px; }

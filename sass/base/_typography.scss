@@ -1,0 +1,53 @@
+
+body,
+body * {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+main {
+  color: #495057;
+}
+
+
+.heading-primary {
+  color: whitesmoke;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &--main {
+    font-weight: 700;
+    display: block;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  &--sub {
+    font-weight: 200;
+    display: block;
+    animation: moveInLeft 1s ease-out .2s;
+    animation-fill-mode: backwards;
+  }
+}
+
+
+/* NEWS */
+.stretched-link {
+  text-decoration: none;
+  color: #2323238e;
+
+  &:hover {
+    text-decoration: underline;
+    color: #232323a3;
+  }
+}
+
+
+// GRADIENT.
+.newsletter-word {
+  background-image: linear-gradient(to right, #327eef, #601ED2);
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

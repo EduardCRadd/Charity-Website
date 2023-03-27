@@ -1,0 +1,41 @@
+.nav-item {
+  display: inline-block;
+  position: relative;
+  font-weight: 500;
+
+  &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: #DC3545;
+      transform-origin: bottom left;
+      transition: transform 0.25s ease-out;
+    }
+  
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom right;
+    }
+}
+
+
+.brand {
+  color: transparent;
+  background-image: linear-gradient(to right, #619DE0, #FF6CB2 33.33333%, #FF6CB2 66.66666%, #619DE0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+
+  background-size: 300% 100%;
+  background-position: top left;
+  transition: all .8s ease-in-out;
+
+  &:hover {
+      background-position: top left 100%;
+    }
+}
+

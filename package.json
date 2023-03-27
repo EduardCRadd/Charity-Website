@@ -1,0 +1,23 @@
+{
+  "name": "fsf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss public/css/styles.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Eduard C.",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "delay": "^5.0.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

@@ -1,0 +1,143 @@
+/* ANIMATIONS */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+// HOVER ANIMATIONS
+.scale-animation {
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.up-animation {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-7px);
+  }
+}
+
+
+/* NEWSLETTER */
+.newsletter-animation {
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+}
+
+
+
+// CUSTOM SCROLL-IN ANIMATION
+.hidden-left {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-20%);
+  transition: all .8s;
+}
+
+.hidden-right {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(20%);
+  transition: all .8s;
+}
+
+.hidden-bottom {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(20%);
+  transition: all .8s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+
+.stagger:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.stagger:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.stagger:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+
+
+
+/* FONT AWESOME */
+.ribbon:hover>.fa-ribbon {
+  -webkit-animation: fa-beat 2s infinite linear;
+  -moz-animation: fa-beat 2s infinite linear;
+  -o-animation: fa-beat 2s infinite linear;
+  animation: fa-beat 2s infinite linear;
+}
+
+.wrapper {
+  // display: flex;
+  overflow-y: scroll;
+  transform: rotate(-90deg);
+}
+
+.news-item {
+  transform: rotate(90deg);
+}
+
